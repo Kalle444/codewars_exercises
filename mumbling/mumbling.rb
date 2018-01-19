@@ -8,6 +8,6 @@ class Accumulator
   end
 
   def character_accumulator
-    @string.chars.each_with_index.map { |char, ind| ["#{(char * (ind + 1)).capitalize}"] }.join("-")
+    @string.chars.map.with_index.map { |char, ind| "#{(char * (ind + 1)).capitalize}" }.join("-")
   end
 end
